@@ -17,6 +17,7 @@
 #import <ReactCommon/RCTTurboModuleManager.h>
 
 #import <react/config/ReactNativeConfig.h>
+#import <Crisp/Crisp-Swift.h>
 
 static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 
@@ -56,6 +57,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   [self.window makeKeyAndVisible];
 
   [super application:application didFinishLaunchingWithOptions:launchOptions];
+  [CrispSDK configureWithWebsiteID:@"YOUR_WEBSITE_ID"];
 
   return YES;
 }
